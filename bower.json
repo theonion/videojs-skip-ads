@@ -9,7 +9,10 @@
     "node_modules",
     "bower_components",
     "package.json",
-    "src/**/*.spec.js"
+    "src/**/*.spec.js",
+    "karma.conf.js",
+    "test",
+    "README.md"
   ],
   "dependencies": {
     "jquery": "~2.1.4",
