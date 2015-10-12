@@ -50,8 +50,15 @@ This relies on [videojs](https://github.com/videojs/video.js) and [videojs-contr
 npm test
 ```
 
-
 Open `localhost:9876/debug.html` in a browser.  Note: known issue is getting tests to pass in CLI with PhantomJS.
+
+# Build
+
+Build the browserified version for release through `bower`
+
+```
+npm run build
+```
 
 ## Contributing
 

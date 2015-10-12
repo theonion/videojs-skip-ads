@@ -1,4 +1,4 @@
-var SkipAds = require('skip_ads');
+var SkipAds = require('./skip_ads');
 
 (function (vjs) {
   'use strict';

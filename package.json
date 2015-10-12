@@ -27,6 +27,7 @@
     "sinon": "^1.13.0"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start karma.conf.js"
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "build": "./node_modules/browserify/bin/cmd.js src/videojs-skip-ads.js > dist/videojs-skip-ads.js"
   }
 }

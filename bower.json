@@ -9,7 +9,7 @@
     "node_modules",
     "bower_components",
     "package.json",
-    "src/**/*.spec.js",
+    "src",
     "karma.conf.js",
     "test",
     "README.md"
