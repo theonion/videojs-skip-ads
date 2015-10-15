@@ -65,7 +65,11 @@ SkipAds.prototype.createButton = function() {
 };
 
 SkipAds.prototype.skipButtonClicked = function(event) {
-  this.player.ads.endLinearAdMode();
+  if (this.player.vpApi) {
+    this.player.vpApi.skipAd();
+  } else {
+    this.player.ads.endLinearAdMode();
+  }
 };
 
 SkipAds.prototype.timeUpdate = function(event) {

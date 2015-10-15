@@ -95,15 +95,16 @@ describe('SkipAds', function() {
 
   describe('#skipButtonClicked', function() {
     beforeEach(function() {
-      skipAds.player.ads = {
-        endLinearAdMode: function(){}
+      skipAds.player.vpApi = {
+        skipAd: function(){}
       };
-      stub(skipAds.player.ads, 'endLinearAdMode');
+
+      stub(skipAds.player.vpApi, 'skipAd');
       skipAds.skipButtonClicked();
     });
 
-    it('ends linear ad mode', function() {
-      expect(skipAds.player.ads.endLinearAdMode.called).to.be.true;
+    it('skips the ad', function() {
+      expect(skipAds.player.vpApi.skipAd.called).to.be.true;
     });
   });
 
