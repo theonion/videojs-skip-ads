@@ -1,6 +1,6 @@
 {
   "name": "videojs-skip-ads",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "authors": ["Chris Sprehe <csprehe@theonion.com>"],
   "description": "Skip button for HTML5 preroll ads",
   "license": "MIT",

@@ -136,6 +136,10 @@ describe('SkipAds', function() {
         skipAds.timeUpdate();
       });
 
+      it('adds enabled class to info div', function() {
+        expect($(skipAds.adsInfo).hasClass('enabled')).to.be.true;
+      });
+
       it('sets timeLeft and updates the user info', function() {
         expect(skipAds.timeLeft).to.equal(25);
         expect(skipAds.timeLeftInfo.innerHTML).to.equal('Your video will resume in 25 seconds');
@@ -194,17 +198,6 @@ describe('SkipAds', function() {
     });
   });
 
-  describe('#adStart', function() {
-    beforeEach(function() {
-      skipAds = new SkipAds(player, {});
-      skipAds.adStart();
-    });
-
-    it('adds "enabled" class to adsInfo', function() {
-      expect($(skipAds.adsInfo).hasClass('enabled')).to.be.true;
-    });
-  });
-
   describe('#adEnd', function() {
     beforeEach(function() {
       skipAds = new SkipAds(player, {});
@@ -218,13 +211,6 @@ describe('SkipAds', function() {
   });
 
   describe('#setupEventHandlers', function() {
-    it('calls adStart on adstart event', function() {
-      stub(SkipAds.prototype, 'adStart');
-      skipAds = new SkipAds(player, {});
-      skipAds.player.trigger('adstart');
-      expect(SkipAds.prototype.adStart.called).to.be.true;
-    });
-
     it('calls adEnd on adend event', function() {
       stub(SkipAds.prototype, 'adEnd');
       skipAds = new SkipAds(player, {});

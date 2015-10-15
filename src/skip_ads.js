@@ -76,6 +76,8 @@ SkipAds.prototype.timeUpdate = function(event) {
   var player = this.player;
 
   if (player.ads.state === 'ad-playback') {
+    this.addClass(this.adsInfo, 'enabled');
+
     var elapsedTime =  player.currentTime();
     var duration = player.duration();
     var timeLeft = Math.round(duration - elapsedTime);
@@ -91,16 +93,11 @@ SkipAds.prototype.timeUpdate = function(event) {
   }
 };
 
-SkipAds.prototype.adStart = function(event) {
-  this.addClass(this.adsInfo, 'enabled');
-};
-
 SkipAds.prototype.adEnd = function(event) {
   this.removeClass(this.adsInfo, 'enabled');
 };
 
 SkipAds.prototype.setupEventHandlers = function() {
-  this.player.on('adstart', this.adStart.bind(this));
   this.player.on('adend', this.adEnd.bind(this));
   this.player.on('timeupdate', this.timeUpdate.bind(this));
 };
