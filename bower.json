@@ -17,7 +17,7 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "video.js": "4.12.15",
-    "videojs-contrib-ads": "1.1.0"
+    "videojs-contrib-ads": "0.5.0"
   },
   "private": true
 }
