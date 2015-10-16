@@ -99,7 +99,7 @@ SkipAds.prototype.adEnd = function(event) {
 
 SkipAds.prototype.setupEventHandlers = function() {
   this.player.on('adend', this.adEnd.bind(this));
-  this.player.on('timeupdate', this.timeUpdate.bind(this));
+  this.player.on('adtimeupdate', this.timeUpdate.bind(this));
 };
 
 module.exports = SkipAds;

@@ -221,7 +221,7 @@ describe('SkipAds', function() {
     it('calls timeUpdate on timeupdate event', function() {
       stub(SkipAds.prototype, 'timeUpdate');
       skipAds = new SkipAds(player, {});
-      skipAds.player.trigger('timeupdate');
+      skipAds.player.trigger('adtimeupdate');
       expect(SkipAds.prototype.timeUpdate.called).to.be.true;
     });
   });
